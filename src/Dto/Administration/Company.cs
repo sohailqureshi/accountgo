@@ -1,12 +1,16 @@
-﻿namespace Dto.Administration
+﻿using System.ComponentModel.DataAnnotations;
+namespace Dto.Administration
 {
-    public class Company : BaseDto
-    {
-        [System.ComponentModel.DataAnnotations.Required]
-        public string Name { get; set; }
-        [System.ComponentModel.DataAnnotations.Required]
-        public string ShortName { get; set; }
-        [System.ComponentModel.DataAnnotations.Required]
-        public string CompanyCode { get; set; }
-    }
+  public class Company : BaseDto
+  {
+    [Required]
+    [Display(Name = "Name")]
+    public string Name { get; set; }
+    [Required]
+    [Display(Name = "Short Name")]
+    public string ShortName { get; set; }
+    [Required]
+    [Display(Name = "Company Code")]
+    public string CompanyCode { get; set; }
+  }
 }
